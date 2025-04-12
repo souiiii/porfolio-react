@@ -25,6 +25,7 @@ function Hero() {
             <img
               className={styles.planet}
               src="../assets/svg/planet-saturn.svg"
+              alt=""
             />
           </div>
           <div className={styles.infoContainer}>
