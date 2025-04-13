@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Hero({ menu }) {
+function Hero({ scrolls, menu }) {
   const spinner = useRef(null);
   const planet = useRef(null);
   const underline = useRef(null);
@@ -26,9 +26,9 @@ function Hero({ menu }) {
     function () {
       const tllScroll = gsap.timeline({
         scrollTrigger: {
-          trigger: menu.current,
-          start: "-30% top",
-          end: "3000% top",
+          trigger: scrolls.current,
+          start: "top bottom",
+          end: "top top",
           scrub: true,
           markers: false,
         },
@@ -39,7 +39,7 @@ function Hero({ menu }) {
         ease: "power1.inOut",
       });
     },
-    [menu]
+    [scrolls]
   );
 
   useEffect(

@@ -6,7 +6,7 @@ import styles from "./ScrollSections.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function ScrollSections({ scroll }) {
+function ScrollSections({ scrolls }) {
   const rocket = useRef();
   useEffect(function () {
     const lenis = new Lenis();
@@ -39,7 +39,7 @@ function ScrollSections({ scroll }) {
   }, []);
   return (
     <>
-      <div ref={scroll} className={styles.scrollSectionWrapper}>
+      <div ref={scrolls} className={styles.scrollSectionWrapper}>
         <div className={styles.scrollSection}>
           <svg
             ref={rocket}

@@ -1,6 +1,4 @@
 .scrollSectionWrapper {
-  min-height: 1000vh;
-  background-color: #d9d9d9;
   position: absolute;
   top: 100%;
   left: 0;
@@ -11,6 +9,9 @@
 }
 
 .scrollSection {
+  min-height: 1000vh;
+  width: 100%;
+  background-color: #d9d9d9;
   position: relative;
 }
 

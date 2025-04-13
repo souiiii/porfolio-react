@@ -1,16 +1,14 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import Hero from "../Componets/Hero";
 import ScrollSections from "../Componets/ScrollSections";
 
-function Home({ menu }) {
-  const scroll = useRef();
-
+function Home({ scrolls, menu }) {
   return (
     <div className="main2">
       <div className="hero-wrapper">
-        <Hero menu={menu} scroll={scroll} />
+        <Hero scrolls={scrolls} menu={menu} />
       </div>
-      <ScrollSections scroll={scroll} />
+      <ScrollSections scrolls={scrolls} />
     </div>
   );
 }

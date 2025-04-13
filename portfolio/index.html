@@ -9,6 +9,13 @@
   <body>
     <div id="root"></div>
     <!-- <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> -->
+
+    <script>
+      window.addEventListener("resize", () => {
+        ScrollTrigger.refresh();
+      });
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
