@@ -79,8 +79,8 @@ function Hero({ menu }) {
             duration: 0.5,
             y: 0,
             ease: "power1.inOut",
-          },
-          "-=0.4"
+          }
+          // "-=0.4"
         )
 
         .to(
@@ -92,23 +92,19 @@ function Hero({ menu }) {
             ease: "power1.inOut",
             stagger: 0.4,
           },
-          "-=1.2"
+          "-=1.5"
         )
         .set([log.current, menu.current], { opacity: 0 })
+        .to([log.current, menu.current, spinner.current, planet.current], {
+          opacity: 1,
+          duration: 0.4,
+          ease: "powerInOut",
+          stagger: 0.2,
+        })
         .to(
-          [
-            log.current,
-            menu.current,
-            spinner.current,
-            planet.current,
-            underline.current,
-          ],
-          {
-            opacity: 1,
-            duration: 0.4,
-            ease: "powerInOut",
-            stagger: 0.2,
-          }
+          underline.current,
+          { opacity: 1, ease: "power1.inOut,duration: 0.2" },
+          "-=0.7"
         );
     },
     [menu]

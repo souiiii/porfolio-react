@@ -181,3 +181,68 @@
           src="../assets/svg/rocket.svg"
           alt=""
         /> */} -->
+
+useEffect(
+function () {
+const t = gsap.timeline();
+const h1 = new SplitType(
+[
+href1.current,
+href2.current,
+href3.current,
+href4.current,
+href5.current,
+href6.current,
+href7.current,
+],
+{
+types: "chars",
+}
+);
+t.set([spinner.current, planet.current], {
+opacity: 0,
+y: 125,
+})
+.set(infoCard.current, { opacity: 0, y: 80 })
+.set(h1.chars, { y: 125 })
+.to(h1.chars, {
+y: 0,
+stagger: 0.03,
+delay: 0.4,
+ease: "power1.inOut",
+duration: 0.1,
+})
+.to(
+infoCard.current,
+{
+opacity: 1,
+duration: 0.5,
+y: 0,
+ease: "power1.inOut",
+}
+"-=0.4"
+)
+
+        .to(
+          [spinner.current, planet.current],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.1,
+            ease: "power1.inOut",
+            stagger: 0.4,
+          },
+          "-=1.2"
+        )
+        .set([log.current, menu.current], { opacity: 0 })
+        .to([log.current, menu.current, spinner.current, planet.current, planet.underline], {
+          opacity: 1,
+          duration: 0.4,
+          ease: "powerInOut",
+          stagger: 0.2,
+        })
+
+    },
+    [menu]
+
+);
