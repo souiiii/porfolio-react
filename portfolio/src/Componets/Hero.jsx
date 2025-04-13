@@ -35,6 +35,7 @@ function Hero({ menu }) {
       });
       tllScroll.to(background.current, {
         opacity: 0,
+        scale: 1.1,
         ease: "power1.inOut",
       });
     },

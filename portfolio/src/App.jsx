@@ -13,8 +13,8 @@ function App() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: menu.current,
-        start: "2700% top",
-        end: "2900% top",
+        start: "2150% top",
+        end: "2350% top",
         scrub: true,
         markers: false,
       },
