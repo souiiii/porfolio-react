@@ -1,4 +1,6 @@
 .heroSection {
+  background: url("../assets/backgounds/homepagebackground.png") center center /
+    cover no-repeat;
   display: grid;
   grid-template-rows: auto 1fr;
   width: 100%;
@@ -26,20 +28,7 @@
 
 .logo {
   width: 6.5rem;
-}
-
-.menuContainer {
-  padding-inline: 5rem;
-  padding-block: 4rem;
-  position: fixed;
-  top: 1%; /* or any distance from the top */
-  right: 0; /* or right, center, etc. */
-  z-index: 1000;
-}
-
-.menu {
-  width: 5rem;
-  mix-blend-mode: difference;
+  opacity: 0;
 }
 
 .main {
@@ -54,13 +43,15 @@
 }
 
 .textContainer {
-  transform: translateY(-20%);
+  /* transform: translateY(-20%); */
   max-width: 121.7rem;
   width: 90%;
   max-height: 37.6rem;
   display: grid;
   column-gap: 3rem;
   row-gap: 2rem;
+  position: relative;
+  top: -10%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
 }
@@ -82,11 +73,17 @@
   align-self: flex-end;
 }
 
+.h1 span {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .star {
   width: 5rem;
+  opacity: 0;
 }
 
 .planet {
+  opacity: 0;
   width: 6rem;
 }
 
@@ -95,6 +92,10 @@
   align-self: flex-start;
   top: -10%;
   position: relative;
+}
+
+.h2 span {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .purpleHeading {
@@ -109,6 +110,8 @@
 }
 
 .infoContainer {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0;
   padding-bottom: 2rem;
   border-radius: 3.2rem;
   max-width: 45.1rem;
@@ -172,15 +175,5 @@
   position: absolute;
   top: 110%;
   width: 68%;
-}
-
-.rocketContainer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -2.5%;
-}
-
-.rocket {
-  width: 10rem;
+  opacity: 0;
 }
