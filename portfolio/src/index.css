@@ -23,6 +23,19 @@ body {
   width: 100vw;
   background-color: #0d0d0d;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* Keep scroll */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 
 .hero-wrapper {
   width: 100%;

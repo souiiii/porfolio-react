@@ -164,25 +164,25 @@ function Hero({ menu }) {
       .to(background.current, {
         x: "-12px",
         y: "6px",
-        duration: 5,
+        duration: 3,
         ease: "sine.inOut",
       })
       .to(background.current, {
         x: "8px",
         y: "-5px",
-        duration: 4.8,
+        duration: 2.8,
         ease: "sine.inOut",
       })
       .to(background.current, {
         x: "-9px",
         y: "-7px",
-        duration: 5.2,
+        duration: 3.2,
         ease: "sine.inOut",
       })
       .to(background.current, {
         x: "6px",
         y: "5px",
-        duration: 5,
+        duration: 3,
         ease: "sine.inOut",
       });
 
@@ -191,25 +191,25 @@ function Hero({ menu }) {
       .to([textContainerr.current, logo.current], {
         x: "12px",
         y: "-6px",
-        duration: 5,
+        duration: 3,
         ease: "sine.inOut",
       })
       .to([textContainerr.current, logo.current], {
         x: "-8px",
         y: "5px",
-        duration: 4.8,
+        duration: 2.8,
         ease: "sine.inOut",
       })
       .to([textContainerr.current, logo.current], {
         x: "9px",
         y: "7px",
-        duration: 5.2,
+        duration: 3.2,
         ease: "sine.inOut",
       })
       .to([textContainerr.current, logo.current], {
         x: "-6px",
         y: "-5px",
-        duration: 5,
+        duration: 3,
         ease: "sine.inOut",
       });
   }, []);
