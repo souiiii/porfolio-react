@@ -72,17 +72,34 @@ function ScrollSections({ scrolls }) {
         </svg>
         <div className={styles.scrollSection}>
           <div className={styles.projectSection}>
-            <Project name="" pic="" lr={1} f1="" f2="" f3="">
-              desc
+            <Project name="" pic="" lr={1}></Project>
+            <Project
+              name="Omnifood"
+              pic="../../assets/imgpng/websiteomnifood.png"
+              lr={2}
+            >
+              Omnifood is a food delivery website, designed to help users find
+              the right diet for them with AI.
             </Project>
-            <Project name="" pic="" lr={2} f1="" f2="" f3="">
-              desc
+            <Project
+              name="Omnifood"
+              pic="../../assets/imgpng/websiteomnifood.png"
+              lr={3}
+            >
+              Omnifood is a food delivery website, designed to help users find
+              the right diet for them with AI.
             </Project>
-            <Project name="" pic="" lr={3} f1="" f2="" f3="">
-              desc
+            <Project
+              name="Omnifood"
+              pic="../../assets/imgpng/websiteomnifood.png"
+              lr={4}
+            >
+              Omnifood is a food delivery website, designed to help users find
+              the right diet for them with AI.
             </Project>
           </div>
         </div>
+        <div className={styles.spacerDiv}></div>
       </div>
     </>
   );

@@ -5,7 +5,6 @@
   width: 100vw;
   /* overflow-x: hidden; */
   z-index: 3;
-  /* border: 2px dashed red; just for visibility */
 }
 
 .scrollSection {
@@ -30,4 +29,10 @@
 
 .projectSection {
   width: 100%;
+}
+
+.spacerDiv {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(#d9d9d9, lch(86.7% 0.01 296.81));
 }

@@ -5,11 +5,16 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-function Project({ lr, name, pic, f1, f2, f3, children }) {
+function Project({ lr, name, pic, children }) {
   const content = useRef(null);
+  const textContainer = useRef(null);
   const heading = useRef(null);
+  const pheading = useRef(null);
   const desc = useRef(null);
+  const pdesc = useRef(null);
   const spider = useRef(null);
+  const imgBack = useRef(null);
+  const img = useRef(null);
   const line1 = useRef(null);
   const line2 = useRef(null);
   const line3 = useRef(null);
@@ -18,12 +23,78 @@ function Project({ lr, name, pic, f1, f2, f3, children }) {
   const line6 = useRef(null);
   const line7 = useRef(null);
 
+  const s = lr % 2 ? true : false;
+
+  useEffect(
+    function () {
+      const t = gsap.timeline({
+        scrollTrigger: {
+          trigger: content.current,
+          start: "20% bottom",
+          end: "120% bottom",
+          scrub: true,
+          markers: false,
+        },
+      });
+      if (!s) {
+        t.fromTo(
+          pheading.current,
+          { x: "-10vw", opacity: 0 },
+          { x: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+        )
+          .fromTo(
+            pdesc.current,
+            { y: "5vh", opacity: 0 },
+            { y: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+          )
+          //   .to(textContainer.current, {
+          //     x: "-3vw",
+          //     y: "8vh",
+          //     duration: 2,
+          //     ease: "power1.inOut",
+          //   })
+          .fromTo(
+            imgBack.current,
+            { x: "15vw", y: "-32vh", opacity: 0 },
+            { x: 0, y: 0, opacity: 1, duration: 3, ease: "power1.inOut" }
+          )
+          .fromTo(
+            img.current,
+            { x: 0, y: 0 },
+            { x: "-2vw", y: "-4vh", duration: 1, ease: "power1.inOut" }
+          );
+      } else {
+        t.fromTo(
+          pheading.current,
+          { x: "10vw", opacity: 0 },
+          { x: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+        )
+          .fromTo(
+            pdesc.current,
+            { y: "5vh", opacity: 0 },
+            { y: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+          )
+          .fromTo(
+            imgBack.current,
+            { x: "-15vw", y: "-32vh", opacity: 0 },
+            { x: 0, y: 0, opacity: 1, duration: 3, ease: "power1.inOut" }
+          )
+          .fromTo(
+            img.current,
+            { x: 0, y: 0 },
+            { x: "2vw", y: "-4vh", duration: 1, ease: "power1.inOut" }
+          );
+      }
+    },
+    [s]
+  );
+
   useEffect(function () {
     const tl = gsap.timeline({
       scrollTrigger: {
-        target: content.current,
-        start: "100% 60%",
-        end: "100% 60%",
+        trigger: content.current,
+        start: "top 70%",
+        end: "top 70%",
         scrub: false,
         markers: false,
         toggleActions: "play none reverse none",
@@ -47,57 +118,55 @@ function Project({ lr, name, pic, f1, f2, f3, children }) {
           x: "-50vw",
         },
         { opacity: 1, rotate: 0, x: 0, duration: 0.5, ease: "power1.inOut" },
-        "-=.4"
+        "-=.3"
       )
       .fromTo(
         line3.current,
         {
           opacity: 0,
-          rotate: 180,
-          x: "-50vw",
+          rotate: -180,
+          x: "50vw",
         },
         { opacity: 1, rotate: 0, x: 0, duration: 0.5, ease: "power1.inOut" },
-        "-=.4"
+        "-=.3"
       )
       .fromTo(
         line4.current,
         {
           opacity: 0,
-          rotate: 180,
-          x: "-50vw",
+          rotate: -180,
+          x: "50vw",
         },
         { opacity: 1, rotate: 0, x: 0, duration: 0.5, ease: "power1.inOut" },
-        "-=.4"
+        "-=.3"
       )
       .fromTo(
         line5.current,
         {
           opacity: 0,
           rotate: 180,
-          x: "-50vw",
+          y: "-50vh",
         },
-        { opacity: 1, rotate: 0, x: 0, duration: 0.5, ease: "power1.inOut" },
-        "-=.4"
+        { opacity: 1, rotate: 0, y: 0, duration: 0.5, ease: "power1.inOut" },
+        "-=.3"
       )
       .fromTo(
         line6.current,
         {
           opacity: 0,
-          rotate: 180,
-          x: "-50vw",
         },
-        { opacity: 1, rotate: 0, x: 0, duration: 0.5, ease: "power1.inOut" },
-        "-=.4"
+        { opacity: 1, duration: 0.5, ease: "power1.inOut" },
+        "-=.3"
       )
       .fromTo(
         line7.current,
         {
           opacity: 0,
-          rotate: 180,
-          x: "-50vw",
+          rotate: -180,
+          y: "50vw",
         },
-        { opacity: 1, rotate: 0, x: 0, duration: 0.5, ease: "power1.inOut" },
-        "-=.4"
+        { opacity: 1, rotate: 0, y: 0, duration: 0.5, ease: "power1.inOut" },
+        "-=.3"
       );
   }, []);
 
@@ -231,14 +300,14 @@ function Project({ lr, name, pic, f1, f2, f3, children }) {
           x1="4.37114e-08"
           y1="-0.5"
           x2="1920"
-          y2="-0.499832"
+          y2="-0.5"
           stroke="#0D0D0D"
           stroke-opacity="0.2"
         />
       </svg>
-      <div ref={content} className={styles.content}>
-        {lr === 1 && (
-          <>
+      <div className={styles.contentContainer}>
+        {lr === 1 ? (
+          <div ref={content} className={styles.content}>
             <svg
               version="1.0"
               className={styles.spiderSvg}
@@ -548,12 +617,37 @@ c68 -421 171 -945 249 -1279 28 -118 50 -216 48 -217 -1 -1 -33 54 -71 124
               </g>
             </svg>
             <h1 ref={heading} className={styles.heading}>
-              W<span className={styles.headingSmall}>ork</span>
+              Work
             </h1>
             <p ref={desc} className={styles.headingDescription}>
               A selection of recent projects.
             </p>
-          </>
+          </div>
+        ) : (
+          <div ref={content} className={styles.content}>
+            <div
+              ref={textContainer}
+              className={s ? styles.textContainer2 : styles.textContainer1}
+            >
+              <h1 ref={pheading} className={styles.prHeading}>
+                {name}
+              </h1>
+              <p ref={pdesc} className={styles.prDesc}>
+                {children}
+              </p>
+            </div>
+            <div
+              ref={imgBack}
+              className={s ? styles.imgContainer2 : styles.imgContainer1}
+            >
+              <img
+                ref={img}
+                className={s ? styles.image2 : styles.image1}
+                src={pic}
+                alt=""
+              />
+            </div>
+          </div>
         )}
       </div>
     </div>
