@@ -2,16 +2,15 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 100vw;
   /* overflow-x: hidden; */
   z-index: 3;
   /* border: 2px dashed red; just for visibility */
 }
 
 .scrollSection {
-  min-height: 1000vh;
   width: 100%;
-  background-color: #d9d9d9;
+  background: linear-gradient(to bottom, #d9d9d9, #f1eef4, #d9d9d9);
   position: relative;
 }
 
@@ -27,4 +26,8 @@
   z-index: 3;
   stroke: #d9d9d9;
   opacity: 0;
+}
+
+.projectSection {
+  width: 100%;
 }

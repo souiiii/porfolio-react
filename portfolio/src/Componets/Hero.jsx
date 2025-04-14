@@ -61,10 +61,10 @@ function Hero({ scrolls, menu }) {
       );
       t.set([spinner.current, planet.current], {
         opacity: 0,
-        y: 125,
+        y: "190%",
       })
         .set(infoCard.current, { opacity: 0, y: 80 })
-        .set(h1.chars, { y: 125 })
+        .set(h1.chars, { y: "190%" })
         .to(h1.chars, {
           y: 0,
           stagger: 0.03,
