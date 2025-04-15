@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import styles from "./ScrollSections.module.css";
 import Project from "./Project";
+import Footer from "./Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +71,7 @@ function ScrollSections({ scrolls }) {
             </g>
           </g>
         </svg>
-        <div className={styles.scrollSection}>
+        <div className={styles.projectSectionWrapper}>
           <div className={styles.projectSection}>
             <Project name="" pic="" lr={1}></Project>
             <Project
@@ -100,6 +101,9 @@ function ScrollSections({ scrolls }) {
           </div>
         </div>
         <div className={styles.spacerDiv}></div>
+        <div className={styles.footerSectionWrapper}>
+          <Footer />
+        </div>
       </div>
     </>
   );

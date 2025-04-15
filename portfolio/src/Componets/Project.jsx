@@ -30,8 +30,8 @@ function Project({ lr, name, pic, children }) {
       const t = gsap.timeline({
         scrollTrigger: {
           trigger: content.current,
-          start: "20% bottom",
-          end: "120% bottom",
+          start: "30% bottom",
+          end: "107% bottom",
           scrub: true,
           markers: false,
         },
@@ -40,49 +40,49 @@ function Project({ lr, name, pic, children }) {
         t.fromTo(
           pheading.current,
           { x: "-10vw", opacity: 0 },
-          { x: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+          { x: 0, opacity: 1, duration: 1, ease: "power1.inOut" }
         )
           .fromTo(
             pdesc.current,
             { y: "5vh", opacity: 0 },
-            { y: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+            { y: 0, opacity: 1, duration: 1, ease: "power1.inOut" }
           )
           //   .to(textContainer.current, {
           //     x: "-3vw",
           //     y: "8vh",
-          //     duration: 2,
+          //     duration: 3,
           //     ease: "power1.inOut",
           //   })
           .fromTo(
             imgBack.current,
             { x: "15vw", y: "-32vh", opacity: 0 },
-            { x: 0, y: 0, opacity: 1, duration: 3, ease: "power1.inOut" }
+            { x: 0, y: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
           )
           .fromTo(
             img.current,
             { x: 0, y: 0 },
-            { x: "-2vw", y: "-4vh", duration: 1, ease: "power1.inOut" }
+            { x: "-2vw", y: "-4vh", duration: 0.5, ease: "power1.inOut" }
           );
       } else {
         t.fromTo(
           pheading.current,
           { x: "10vw", opacity: 0 },
-          { x: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+          { x: 0, opacity: 1, duration: 1, ease: "power1.inOut" }
         )
           .fromTo(
             pdesc.current,
             { y: "5vh", opacity: 0 },
-            { y: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
+            { y: 0, opacity: 1, duration: 1, ease: "power1.inOut" }
           )
           .fromTo(
             imgBack.current,
             { x: "-15vw", y: "-32vh", opacity: 0 },
-            { x: 0, y: 0, opacity: 1, duration: 3, ease: "power1.inOut" }
+            { x: 0, y: 0, opacity: 1, duration: 2, ease: "power1.inOut" }
           )
           .fromTo(
             img.current,
             { x: 0, y: 0 },
-            { x: "2vw", y: "-4vh", duration: 1, ease: "power1.inOut" }
+            { x: "2vw", y: "-4vh", duration: 0.5, ease: "power1.inOut" }
           );
       }
     },

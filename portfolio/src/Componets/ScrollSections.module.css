@@ -7,7 +7,7 @@
   z-index: 3;
 }
 
-.scrollSection {
+.projectSectionWrapper {
   width: 100%;
   background: linear-gradient(to bottom, #d9d9d9, #f1eef4, #d9d9d9);
   position: relative;
@@ -32,7 +32,15 @@
 }
 
 .spacerDiv {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   background: linear-gradient(#d9d9d9, lch(86.7% 0.01 296.81));
+}
+
+.footerSectionWrapper {
+  background-color: #0d0d0d;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(150vh);
+  /* border: 2px solid white; */
 }
