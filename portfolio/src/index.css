@@ -12,7 +12,7 @@
 html,
 body {
   width: 100%;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   min-height: 100%;
   max-width: 100%;
 }
@@ -29,7 +29,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: scroll; /* Keep scroll */
+  /* overflow-y: scroll; Keep scroll */
   scrollbar-width: none; /* Firefox */
 }
 
@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 0;
+  z-index: -1;
 }
 
 .menuContainer {
@@ -68,7 +68,32 @@ body::-webkit-scrollbar {
 
 .main2 {
   width: 100%;
+  /* position: relative; */
 }
 .main {
+  width: 100vw;
+  /* position: relative; */
+}
+
+.scrollSectionWrapper {
+  position: absolute;
+  top: 100vh;
+  left: 0;
   width: 100%;
+  /* overflow-x: hidden; */
+  z-index: 3;
+  box-shadow: 10 10px 30px rgb(0, 0, 0);
+}
+
+.testimonialSectionWrapper {
+  height: 100vh;
+  background-color: #d9d9d9;
+  position: absolute;
+  width: 100%;
+  top: 100vh;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  scale: 1.1;
+  /* top: 100vh; */
 }
