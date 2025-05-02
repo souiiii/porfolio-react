@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Hero({ scrolls, menu }) {
+function Hero({ scrolls, menu, background2 }) {
   const spinner = useRef(null);
   const planet = useRef(null);
   const underline = useRef(null);
@@ -33,11 +33,11 @@ function Hero({ scrolls, menu }) {
           markers: false,
         },
       });
-      tllScroll.to(background.current, {
-        opacity: 0,
-        scale: 1.1,
-        ease: "power1.inOut",
-      });
+      // tllScroll.to(background.current, {
+      //   opacity: 0,
+      //   scale: 1.1,
+      //   ease: "power1.inOut",
+      // });
     },
     [scrolls]
   );
@@ -158,25 +158,25 @@ function Hero({ scrolls, menu }) {
 
     const backgroundTl = gsap.timeline({ repeat: -1, yoyo: true });
     backgroundTl
-      .to(background.current, {
+      .to([background.current, background2.current], {
         x: "-12px",
         y: "6px",
         duration: 3,
         ease: "sine.inOut",
       })
-      .to(background.current, {
+      .to([background.current, background2.current], {
         x: "8px",
         y: "-5px",
         duration: 2.8,
         ease: "sine.inOut",
       })
-      .to(background.current, {
+      .to([background.current, background2.current], {
         x: "-9px",
         y: "-7px",
         duration: 3.2,
         ease: "sine.inOut",
       })
-      .to(background.current, {
+      .to([background.current, background2.current], {
         x: "6px",
         y: "5px",
         duration: 3,

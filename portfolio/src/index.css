@@ -93,7 +93,5 @@ body::-webkit-scrollbar {
   top: 100vh;
   left: 0;
   z-index: 2;
-  opacity: 0;
-  scale: 1.1;
   /* top: 100vh; */
 }

@@ -37,15 +37,15 @@ function App() {
         start: "top bottom",
         end: "bottom bottom",
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
 
-    t.fromTo(
-      testimonialSec.current,
-      { opacity: 0, scale: 1.1 },
-      { opacity: 1, ease: "power1.inOut", scale: 1 }
-    );
+    // t.fromTo(
+    //   testimonialSec.current,
+    //   { opacity: 0, scale: 1.1 },
+    //   { opacity: 1, ease: "power1.inOut", scale: 1 }
+    // );
 
     // Pinned element setup
     ScrollTrigger.create({

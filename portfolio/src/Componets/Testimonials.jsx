@@ -1,6 +1,6 @@
 import styles from "./Testimonials.module.css";
-function Testimonials() {
-  return <div className={styles.testimonialMain}></div>;
+function Testimonials({ background2 }) {
+  return <div ref={background2} className={styles.testimonialMain}></div>;
 }
 
 export default Testimonials;
